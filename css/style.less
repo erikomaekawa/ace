@@ -1,0 +1,346 @@
+/*
+File Name: style.less
+Date: 2/14/20
+Programmer: Eriko Maekawa
+*/
+
+/*Global Style*/
+
+body {
+    font-size: 18px;
+}
+
+main {
+    margin-left: 25px;
+}
+
+main .bold {
+    font-weight: bold;
+}
+
+main a {
+    color: #ff0000;
+}
+
+main a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+main .space {
+    padding-top: 20px;
+}
+
+/*FOOTER*/
+
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    line-height: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer .social-media {
+    font-size: 2.3em;
+    padding-top: 15px;
+}
+
+footer .fab {
+    color: #ff0000;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+footer .copyright {
+    color: #fff;
+    font-size: 12px;
+    font-style: italic;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* HOME */
+
+main #facebook {
+    #twitter {
+        margin-top: 9px;
+    }
+}
+
+main .container {
+    margin-bottom: 30px;
+}
+
+main .slide-show {
+
+    text-align: center;
+}
+
+main .mySlides {
+    width: 90%;
+    height: 90%;
+    padding-left: 5%;
+}
+
+main .border {
+    border-style: solid;
+    border-color: #ebedf0;
+}
+
+
+/* EVENT */
+
+main #event-img {
+    max-width: 90%;
+    height: auto;
+    margin: 15px 0 0 15px;
+}
+
+main table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 40px;
+}
+
+main td,
+th {
+    border: 2px solid #595959;
+    text-align: left;
+    padding: 8px;
+}
+
+main th {
+    background-color: #000;
+    color: #fff;
+}
+
+
+main .sat-sun {
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+
+main #splash_detail {
+    padding-left: 43px;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+main #weather {
+    padding-bottom: 30px;
+    padding-right: 23px;
+}
+
+
+/* FORM */
+
+main * {
+    box-sizing: border-box;
+}
+
+main #honeypot {
+    display: none;
+}
+
+main #register_container {
+    display: block;
+    text-align: center;
+}
+
+main #contact_container {
+    display: block;
+    text-align: center;
+}
+
+
+main form {
+    text-align: left;
+    width: 90%;
+    background-color: #d3d3d3;
+    padding: 5% 5%;
+    display: inline-block;
+}
+
+main form input[type=submit] {
+    background-color: #000;
+    color: #fff;
+    margin: 30px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+main form input[type=submit]:hover {
+    background-color: #ff0000;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+main form input,
+main form select,
+main form textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+main form #mySubmit {
+    width: 40%;
+    border-style: none;
+}
+
+main form #mySubmit2 {
+    width: 40%;
+    border-style: none;
+}
+
+main form #submit {
+    text-align: center;
+}
+
+main form #submit2 {
+    text-align: center;
+}
+
+main #contact-form {
+    height: 420px;
+    margin-bottom: 30px;
+}
+
+main #register_form {
+    height: 990px;
+    margin-bottom: 30px;
+}
+
+main form #checkbox {
+    width: 19px;
+}
+
+main form #checkbox-line {
+    display: grid;
+    grid-template-columns: 5% 90%;
+}
+
+main form p {
+    color: black;
+}
+
+main #events-button {
+    margin-bottom: 30px;
+}
+
+
+/* FAQ */
+
+main #faq {
+    margin-bottom: 45px;
+}
+
+main .faq {
+    margin-top: -10px;
+}
+
+main .faq {
+    margin-bottom: 35px;
+}
+
+main #list {
+    margin-top: -21px;
+}
+
+main #list {
+    margin-bottom: 40px;
+}
+
+main #go_contact {
+    margin-top: 45px;
+}
+
+
+/* TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+
+    footer .social-media {
+        font-size: 2.5em;
+    }
+
+    main #event-img {
+        padding-left: 4%;
+    }
+
+    main #splash_detail {
+        font-size: 14px;
+    }
+
+    main #contact-form {
+        height: 445px;
+        width: 700px;
+        margin-right: 30px;
+        padding-top: 25px;
+    }
+
+    main #register_form {
+        height: 1020px;
+        width: 700px;
+        margin-right: 10px;
+        padding-top: 25px;
+    }
+
+    main form label {
+        display: inline-block;
+        margin: 3px;
+    }
+
+    main .mySlides {
+        padding-left: 7%;
+    }
+}
+
+/* DESKTOP STYLES */
+
+@media only screen and (min-width: 1025px) {
+
+    main {
+        font-size: 1.1em;
+    }
+
+
+    footer .social-media {
+        font-size: 3em;
+    }
+
+    main h1 {
+        font-size: 1.7em;
+    }
+
+    main #facebook {
+        margin-top: 0;
+    }
+
+    main #event-img {
+        padding-left: 5%;
+    }
+
+    main #splash_detail {
+        font-size: 16px;
+    }
+
+    main #contact-form {
+        height: 450px;
+        width: 700px;
+        margin-right: 75px;
+    }
+
+    main #register_form {
+        height: 1070px;
+        width: 700px;
+        margin-top: 10px;
+        margin-right: 75px;
+    }
+
+    main .mySlides {
+        width: 95%;
+        padding-left: 4%;
+    }
+
+}

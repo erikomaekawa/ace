@@ -1,0 +1,272 @@
+/*
+File Name: navigation.css
+Date: 2/14/20
+Programmer: Eriko Maekawa
+*/
+
+header img.logo {
+    height: 42px;
+    display: block;
+    padding: 0 0;
+    cursor: pointer;
+    margin: 13px 0 0 17px;
+}
+
+header .hamburger {
+    display: block;
+    float: right;
+    width: 29px;
+    height: 27px;
+    margin: -39.5px 10px;
+    position: relative;
+    z-index: 999999;
+}
+
+.hamburger span {
+    margin: -2px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: none;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    transition-duration: 0s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.hamburger span {
+    display: block;
+}
+
+.hamburger span:before,
+.hamburger span:after {
+    position: absolute;
+    content: '';
+}
+
+.hamburger span:before,
+.hamburger span:after {
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+}
+
+.hamburger span:before {
+    margin-top: -10px;
+}
+
+.hamburger span:after {
+    margin-top: 10px;
+}
+
+.hamburger span:before {
+    -webkit-transition-property: margin, -webkit-transform;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: .2s, 0s;
+    -moz-transition-property: margin, -moz-transform;
+    -moz-transition-duration: .2s;
+    -moz-transition-delay: .2s, 0s;
+    transition-property: margin, transform;
+    transition-duration: .2s;
+    transition-delay: 0.2s, 0s;
+}
+
+.hamburger span:after {
+    -webkit-transition-property: margin, -webkit-transform;
+    -webkit-transition-duration: .2s;
+    -webkit-transition-delay: .2s, 0s;
+    -moz-transition-property: margin, -moz-transform;
+    -moz-transition-duration: .2s;
+    -moz-transition-delay: .2s, 0s;
+    transition-property: margin, transform;
+    transition-duration: .2s;
+    transition-delay: 0.2s, 0s;
+}
+
+.hamburger.active span {
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.hamburger.active span:before {
+    margin-top: 0;
+    -webkit-transform: rotate(45deg);
+    -webkit-transition-delay: 0s, .2s;
+    -moz-transform: rotate(45deg);
+    -moz-transition-delay: 0s, .2s;
+    transform: rotate(45deg);
+    transition-delay: 0s, 0.2s;
+}
+
+.hamburger.active span:after {
+    margin-top: 0;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition-delay: 0s, .2s;
+    -moz-transform: rotate(-45deg);
+    -moz-transition-delay: 0s, .2s;
+    transform: rotate(-45deg);
+    transition-delay: 0s, 0.2s;
+}
+
+.main-menu-wrap {
+    position: absolute;
+    left: 8px;
+    right: 0;
+    width: 96.9%;
+    top: 70px;
+    background: #4d4d4d;
+    height: 0;
+    overflow: auto;
+    text-align: center;
+    transition: height 0.6s cubic-bezier(0.5, 1, 0.22, 1);
+    -webkit-transition: height 0.6s cubic-bezier(0.5, 1, 0.22, 1);
+}
+
+.main-menu {
+    opacity: 0;
+    padding-top: 30px;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.menu-active .main-menu {
+    opacity: 1;
+    transition: opacity 0.2s 0.2s ease-in-out;
+    -webkit-transition: opacity 0.2s 0.2s ease-in-out;
+}
+
+.main-menu a {
+    color: #fff;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.main-menu a:hover,
+.main-menu a:active {
+    color: #ff0000;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    line-height: 30px;
+    height: 70px;
+}
+
+header .reg-menu {
+    display: none;
+}
+
+header {
+    display: inline-block;
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 768px) {
+    header .hamburger {
+        display: none;
+    }
+
+    header img.logo {
+        margin: 21px 0 0 23px;
+        width: auto;
+        height: 56px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 20% 60%;
+        grid-column-gap: 20%;
+        height: 100px;
+    }
+
+    header nav.reg-menu {
+        text-align: right;
+        font-size: 1.2em;
+        display: contents;
+    }
+
+    header nav.reg-menu ul {
+        display: grid;
+        margin-right: 5%;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    header nav.reg-menu li {
+        display: block;
+        margin-left: auto;
+        color: #fff;
+    }
+
+    header nav.reg-menu a {
+        font-family: 'Volkhov', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        padding-top: 30px;
+    }
+
+    header nav.reg-menu a li:hover {
+        color: #ff0000;
+    }
+}
+
+/* DESKTOP STYLES */
+@media only screen and (min-width: 1025px) {
+    header img.logo {
+        width: auto;
+        height: 65px;
+        margin: 18px 0 17px 26px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 20% 60%;
+        grid-column-gap: 20%;
+        height: 100px;
+    }
+
+    header nav.reg-menu {
+        text-align: right;
+        font-size: 1.3em;
+        display: contents;
+    }
+
+    header nav.reg-menu ul {
+        display: grid;
+        margin-right: 5%;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    header nav.reg-menu li {
+        display: block;
+        margin-left: auto;
+        color: white;
+    }
+
+    header nav.reg-menu a {
+        font-family: 'Volkhov', sans-serif;
+        font-weight: 800;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        padding-top: 30px;
+    }
+}

@@ -1,0 +1,87 @@
+/*
+File Name: grid.css
+Date: 2/12/20
+Programmer: Eriko Maekawa
+*/
+
+/*  SECTIONS  */
+main .section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+main .col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 0%;
+}
+
+main .col:first-child {
+    margin-left: 0;
+}
+
+/*  GROUPING  */
+main .group:before {
+    content: "";
+    display: table;
+}
+
+main .group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main .span_2_of_2 {
+    width: 100%;
+}
+
+main .span_1_of_2 {
+    width: 100%;
+}
+
+
+/* TABLET STYLES - Grid of Two */
+
+@media only screen and (min-width: 768px) {
+    main .span_2_of_2 {
+        width: 100%;
+    }
+
+    main .span_1_of_2 {
+        width: 49.4%;
+    }
+
+    main .col {
+        margin: 1% 0 1% 1%;
+    }
+
+    main .col:nth-child(2) {
+        margin-left: 0;
+    }
+
+}
+
+/* DESKTOP STYLES - Grid of Two */
+
+@media only screen and (min-width: 1025px) {
+    main .col {
+        margin: 0 0 1% 1.6%;
+    }
+
+    main .col:nth-child(2) {
+        margin-left: 3.5%;
+        margin-top: 2%;
+    }
+
+    main .span_1_of_2 {
+        width: 40%;
+
+    }
+    
+    main .section {
+        margin-left: 120px;
+    }
+}
